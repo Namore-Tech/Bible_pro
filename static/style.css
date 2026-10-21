@@ -1,0 +1,111 @@
+
+body {
+  display: flex;
+  background-color: #eee6e6;
+  justify-content: center;
+  align-items: center;
+   perspective: 800px;
+   margin: 0;
+   padding: 0;
+}
+.dark-cover{
+    position: absolute;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.15);
+    width:100%;
+    height: 110%;
+    box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.6)inset;
+}
+.main{
+    display:flex;
+    background-color: #36354e;
+    position: relative;
+    width: 65%;
+    height: 80vh;
+    margin-top: 5%;
+    justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotateX(30deg) rotateY(1deg) rotateZ(0deg);
+}
+.book {
+  position: absolute;
+ display: flex;
+ left:15%;
+  width: 59rem;
+  height: 35rem;
+  perspective: 140rem;
+}
+.cover {
+  background-color: #000000;
+  transform: rotateY(0deg);
+  width: 22rem;
+  height: 35rem;
+}
+.page {
+  top: 0.7rem;
+  left: 0.7rem;
+  background-color: #e9e6c4;
+  transform: rotateY(0deg);
+  width: 21rem;
+  height: 33rem;
+  text-align: right;
+  font-size: 8px;
+  color: #777;
+  font-family: monospace;
+}
+.page::before, .page::after {
+  display: block;
+  border-top: 1px dashed rgba(0, 0, 0, 0.3);
+  content: "";
+  padding-bottom: 1rem;
+}
+.cover, .page {
+  position: absolute;
+  padding: 1rem;
+  transform-origin: 100% 0;
+  border-radius: 5px 0 0 5px;
+  box-shadow: inset 3px 0px 20px rgba(0, 0, 0, 0.2),
+    0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.cover.turn {
+  animation: bookCover 3s forwards;
+}
+.page.turn {
+  animation: bookOpen 3s forwards;
+}
+.pen{
+    position: absolute;
+    width: 25px;
+    height: 300px;
+    background-color: aqua;
+    left: 90%;
+    border-radius: 50px 50px 5px 80px;
+}
+.candle{
+    position: absolute;
+    width:125px;
+    height: 125px;
+    background-color: burlywood;
+    border-radius: 100px;
+    left: 1%;
+    top:10%;
+}
+
+.page:nth-of-type(1) { animation-delay: 0.1s; }
+.page:nth-of-type(2) { animation-delay: 0.4s; }
+.page:nth-of-type(3) { animation-delay: 0.7s; }
+.page:nth-of-type(4) { animation-delay: 1.0s; }
+.page:nth-of-type(5) { animation-delay: 1.3s; }
+.page:nth-of-type(6) { animation-delay: 1.6s; }
+
+@keyframes bookOpen {
+  30%  { z-index: 999; }
+  100% { transform: rotateY(180deg); z-index: 999; }
+}
+@keyframes bookCover {
+  30%  { z-index: 999; }
+  100% { transform: rotateY(180deg); z-index: 1; }
+}

@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    background-color: rgb(2, 2, 44);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    margin:0;
+    padding: 0;
+}
+.main{
+    position: absolute;
+    background-image: url("44220-jeremiah-2911_source_file.png");
+    background-size:100%100%;
+    background-position: center;
+    width: 81%;
+    height: 80%;
+    top:8%;
+    left: 19%;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+.mini-screen{
+    position: absolute;
+    background-color: rgb(2, 6, 38);
+    width: 100%;
+    height: 30%;
+    top:102%;
+    border-radius: 20px;
+    border: 1px solid gray; 
+}
+.mini1{
+    position: absolute;
+    background-color: transparent;
+    width:50%;
+    height: 95%;
+    top:2.5%;
+    left:0.5%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.mini2{
+    position: absolute;
+    background-color: transparent;
+    width:27%;
+    height: 95%;
+    left:51%;
+    top:2.5%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.text-box{
+    position : absolute;
+    background-color: black;
+    width: 95%;
+    height: 70%;
+    top: 28%;
+    left: 2.3%;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+.mini3{
+    position: absolute;
+    background-color: transparent;
+    width:21%;
+    height: 95%;
+    left:78.5%;
+    top:2.5%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.vertical-screen{
+    position: absolute;
+    background-color: rgb(2, 6, 38);
+    width: 22%;
+    height: 131%;
+    right:101%;
+    border-radius: 20px;
+    border: 1px solid gray; 
+}
+.v1{
+    position: absolute;
+    background-color: transparent;
+    width: 96%;
+    height: 28%;
+    left:1.5%;
+    top:1%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.v2{
+    position: absolute;
+    background-color: transparent;
+    width: 96%;
+    height: 39%;
+    top:30%;
+    left:1.5%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.v3{
+    position: absolute;
+    background-color: transparent;
+    width: 96%;
+    height: 29%;
+    top:70%;
+    left:1.5%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    backdrop-filter: blur(5px);
+}
+.navbar{
+    position: absolute;
+    display: flex;
+    background-color: rgb(2, 6, 38);
+    width: 123%;
+    height: 9%;
+    bottom:101%;
+    right:0%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid gray; 
+}
+
+.system-status {
+  position: relative;
+  display: flex;
+  left: 45%;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #a8b8bd;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ffc3;
+  box-shadow: 0 0 10px #00ffc3;
+}
